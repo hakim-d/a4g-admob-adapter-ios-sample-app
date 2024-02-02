@@ -16,6 +16,9 @@ struct RewardedContentView: View {
   private let coordinator = RewardedAdCoordinator()
   private let adViewControllerRepresentable = AdViewControllerRepresentable()
   let navigationTitle: String
+    
+    @State private var rewardOffset: CGPoint = .init(x: 0, y: 0)
+    @State private var rewardScale: CGSize = .init(width: 1, height: 1)
 
   var adViewControllerRepresentableView: some View {
     adViewControllerRepresentable
@@ -37,7 +40,7 @@ struct RewardedContentView: View {
 
         Button("Watch video for additional 10 diamonds") {
           coordinator.showAd(from: adViewControllerRepresentable.viewController) { rewardAmount in
-            coins += rewardAmount
+              coins += rewardAmount
           }
           showWatchVideoButton = false
         }
@@ -52,14 +55,28 @@ struct RewardedContentView: View {
 
       HStack {
           HStack {
+              Spacer()
+              
               Image("coin")
                   .resizable()
                   .scaledToFit()
                   .frame(width: 30)
               Text("Diamonds: \(coins)")
                   .font(.title)
+              
+              Spacer()
           }
-            .padding()
+              .padding()
+              .offset(x: rewardOffset.x, y: rewardOffset.y)
+              .scaleEffect(rewardScale, anchor: UnitPoint.bottom)
+              .onChange(of: self.coins) { coins in
+                  self.rewardOffset = .init(x: 0, y: 50)
+                  self.rewardScale = .init(width: 0.5, height: 0.5)
+                  withAnimation(.spring(dampingFraction: 1).speed(1.5)){
+                      self.rewardOffset = .init(x: 0, y: 0)
+                      self.rewardScale = .init(width: 1, height: 1)
+                  }
+              }
           Spacer()
       }
       .background(.orange.opacity(0.3))
@@ -110,6 +127,7 @@ private class RewardedAdCoordinator: NSObject, GADFullScreenContentDelegate {
   var rewardedAd: GADRewardedAd?
 
   func loadAd() {
+      GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ GADSimulatorID ]
     GADRewardedAd.load(
       withAdUnitID: "ca-app-pub-3940256099942544/1712485313",
       request: GADRequest()

@@ -72,9 +72,10 @@ struct ContentView: View {
 private struct BannerView: UIViewControllerRepresentable {
   @State private var viewWidth: CGFloat = .zero
   private let bannerView = GADBannerView()
-  private let adUnitID = "ca-app-pub-2451195056696095/6358050824"
+  private let adUnitID = "ca-app-pub-2451195056696095/4271831588"
 
   func makeUIViewController(context: Context) -> some UIViewController {
+      GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ GADSimulatorID ]
     let bannerViewController = BannerViewController()
     bannerView.adUnitID = adUnitID
     bannerView.rootViewController = bannerViewController

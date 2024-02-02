@@ -89,6 +89,7 @@ private class InterstitialAdCoordinator: NSObject, GADFullScreenContentDelegate 
   private var interstitial: GADInterstitialAd?
 
   func loadAd() {
+      GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ GADSimulatorID ]
     GADInterstitialAd.load(
       withAdUnitID: "ca-app-pub-3940256099942544/4411468910", request: GADRequest()
     ) { ad, error in
