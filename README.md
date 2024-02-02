@@ -1,6 +1,7 @@
 # A4G Admob iOS Adapter – Sample App
 
-<img width="150" alt="Screenshot 2024-02-02 at 14 58 44" src="https://github.com/hakim-d/a4g-admob-adapter-ios-sample-app/assets/7389034/05219820-021a-474a-be85-ecb5672e9538">
+<img width="400" alt="Screenshot 2024-02-02 at 14 58 44" src="https://github.com/hakim-d/a4g-admob-adapter-ios-sample-app/assets/7389034/e4dd6e9c-f29a-48ce-b38a-96fb92082de8">
+
 
 
 Add these 2 dependencies into your Podfile and run ```pod install```
