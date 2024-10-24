@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		56FF1990E9E9A310DED6ACBB /* Pods_A4G.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CB3D1CC5CDAAE17E0EBEE8 /* Pods_A4G.framework */; };
+		EB0967122CCA80E800A976CD /* NativeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0967112CCA80E800A976CD /* NativeContentView.swift */; };
+		EB0967142CCA83C000A976CD /* NativeAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0967132CCA83C000A976CD /* NativeAdViewModel.swift */; };
+		EB0967162CCA86E600A976CD /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0967152CCA86E600A976CD /* NativeAdView.xib */; };
 		EB0EBBC62B6BC7C700EDEBCC /* InterstitialContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0EBBC52B6BC7C700EDEBCC /* InterstitialContentView.swift */; };
 		EB5DAD282B6A802B001C097E /* A4GApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5DAD272B6A802B001C097E /* A4GApp.swift */; };
 		EB5DAD2A2B6A802B001C097E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5DAD292B6A802B001C097E /* ContentView.swift */; };
@@ -20,6 +23,9 @@
 		1EB42760C69CD3C7E6F7F83C /* Pods-A4G.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A4G.debug.xcconfig"; path = "Target Support Files/Pods-A4G/Pods-A4G.debug.xcconfig"; sourceTree = "<group>"; };
 		42CB3D1CC5CDAAE17E0EBEE8 /* Pods_A4G.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_A4G.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B041C380F1648C3214402EA5 /* Pods-A4G.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A4G.release.xcconfig"; path = "Target Support Files/Pods-A4G/Pods-A4G.release.xcconfig"; sourceTree = "<group>"; };
+		EB0967112CCA80E800A976CD /* NativeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeContentView.swift; sourceTree = "<group>"; };
+		EB0967132CCA83C000A976CD /* NativeAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdViewModel.swift; sourceTree = "<group>"; };
+		EB0967152CCA86E600A976CD /* NativeAdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
 		EB0EBBC52B6BC7C700EDEBCC /* InterstitialContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InterstitialContentView.swift; path = /Users/hakim/Documents/WebApps/iOS/A4G/A4G/InterstitialContentView.swift; sourceTree = "<absolute>"; };
 		EB5DAD242B6A802B001C097E /* A4G.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A4G.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5DAD272B6A802B001C097E /* A4GApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4GApp.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 		EB5DAD262B6A802B001C097E /* A4G */ = {
 			isa = PBXGroup;
 			children = (
+				EB0967112CCA80E800A976CD /* NativeContentView.swift */,
 				EBCECE1B2B6AB03400D92E09 /* Info.plist */,
 				EB5DAD272B6A802B001C097E /* A4GApp.swift */,
 				EB0EBBC52B6BC7C700EDEBCC /* InterstitialContentView.swift */,
@@ -89,6 +96,8 @@
 				EB5DAD2B2B6A802C001C097E /* Assets.xcassets */,
 				EB5DAD2D2B6A802C001C097E /* Preview Content */,
 				EBCF7A622B6BE67C0044000A /* RewardedContentView.swift */,
+				EB0967132CCA83C000A976CD /* NativeAdViewModel.swift */,
+				EB0967152CCA86E600A976CD /* NativeAdView.xib */,
 			);
 			path = A4G;
 			sourceTree = "<group>";
@@ -162,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB5DAD2F2B6A802C001C097E /* Preview Assets.xcassets in Resources */,
+				EB0967162CCA86E600A976CD /* NativeAdView.xib in Resources */,
 				EB5DAD2C2B6A802C001C097E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,10 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB0967142CCA83C000A976CD /* NativeAdViewModel.swift in Sources */,
 				EBCF7A632B6BE67C0044000A /* RewardedContentView.swift in Sources */,
 				EB5DAD2A2B6A802B001C097E /* ContentView.swift in Sources */,
 				EB5DAD282B6A802B001C097E /* A4GApp.swift in Sources */,
 				EB0EBBC62B6BC7C700EDEBCC /* InterstitialContentView.swift in Sources */,
+				EB0967122CCA80E800A976CD /* NativeContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

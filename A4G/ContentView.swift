@@ -55,6 +55,13 @@ struct ContentView: View {
                         .foregroundColor (.white)
                         .background (RoundedRectangle (cornerRadius: 10).fill (Color.blue))
                 }
+                NavigationLink(destination:  NativeContentView(navigationTitle: "Native Ad")) {
+                    Text("Native Ad")
+                        .font(.title2)
+                        .padding()
+                        .foregroundColor (.white)
+                        .background (RoundedRectangle (cornerRadius: 10).fill (Color.blue))
+                }
           }
       }
   }
